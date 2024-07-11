@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 100;
+    src: url("/fonts/PlusJakartaSans/PlusJakartaSans-Thin.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 200;
+    src: url("/fonts/PlusJakartaSans/PlusJakartaSans-ExtraLight.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 300;
+    src: url("/fonts/PlusJakartaSans/PlusJakartaSans-Light.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 400;
+    src: url("/fonts/PlusJakartaSans/PlusJakartaSans-Normal.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 500;
+    src: url("/fonts/PlusJakartaSans/PlusJakartaSans-Medium.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 600;
+    src: url("/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold.ttf") format("ttf");
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 14%;
+    --foreground: 0 0% 100%;
+  }
+  body {
+    @apply overflow-x-hidden bg-background font-PlusJakartaSans text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  .horizontal-scroll {
+    @apply mx-auto w-full overflow-x-auto pb-8;
+    scrollbar-color: white rgba(70, 73, 109, 0.15);
+    scrollbar-width: thin;
+  }
+
+  .horizontal-scroll .horizontal-scroll_item-padding.first {
+    @apply ml-6 w-full xl:ml-0;
+  }
+
+  .horizontal-scroll .horizontal-scroll_item-padding.last {
+    @apply mr-6 w-full xl:mr-0;
+  }
+
+  .layout-grid-row {
+    @apply grid grid-flow-col items-center justify-start gap-5 lg:gap-x-7;
+  }
+
+  .card {
+    @apply relative flex h-full w-full flex-col items-center justify-center rounded-3xl bg-background px-4 py-5 text-center lg:px-7 lg:py-7;
+  }
+
+  .card_image {
+    @apply h-[144px] w-full object-cover lg:h-full lg:object-contain;
+  }
+
+  .card_title {
+    @apply text-sm font-semibold lg:text-2xl;
+  }
+
+  .card_description {
+    @apply text-xs lg:text-base;
+  }
+}

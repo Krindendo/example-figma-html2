@@ -23,7 +23,7 @@ export default {
         foreground: "hsl(var(--foreground))",
       },
       fontFamily: {
-        montserrat: ["Montserrat", ...fontFamily.sans],
+        PlusJakartaSans: ["Plus Jakarta Sans", ...fontFamily.sans],
       },
     },
   },
