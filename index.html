@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Converting Figma to HTML" />
+    <title>Figma to HTML</title>
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <header
+      class="fixed left-0 right-0 top-0 z-50 flex flex-row items-center justify-between bg-background/5 px-4 py-5 backdrop-blur-sm lg:bg-background lg:px-10 lg:py-9"
+    >
+      <nav class="flex flex-row items-center gap-9">
+        <img src="/images/logo.svg" alt="logo of reqaps" />
+        <ul class="hidden flex-row items-center justify-center gap-12 lg:flex">
+          <li class="hover:underline">Features</li>
+          <li class="hover:underline">Benefits</li>
+          <li class="hover:underline">Free Generator</li>
+        </ul>
+      </nav>
+      <div class="hidden flex-row items-center gap-7 lg:flex">
+        <a class="hover:underline" href="/member">Already a member?</a>
+        <a
+          href="#"
+          class="rounded-lg border border-white px-[25px] py-[9px] text-center"
+        >
+          Log in
+        </a>
+      </div>
+      <div class="flex w-full justify-end lg:hidden">
+        <button id="menu-button">
+          <img src="/icons/hamburger.svg" alt="menu" />
+        </button>
+      </div>
+    </header>
+    <div
+      id="menu"
+      class="fixed bottom-0 left-0 right-0 top-0 z-50 hidden bg-black/40"
+    >
+      <div
+        class="absolute bottom-0 right-0 top-0 flex w-[350px] translate-x-full flex-col border-l border-[#909090] bg-[#2C2C2C] duration-500 ease-in-out"
+      >
+        <div class="flex w-full items-center justify-between border-b p-7">
+          <p class="text-xl font-bold">Menu</p>
+          <button id="close-menu-button">
+            <img src="/icons/close.svg" alt="icon for close button" />
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col items-start justify-center">
+          <a href="#" class="flex w-full justify-between px-7 py-4 pt-8">
+            <p class="text-xl font-medium">Features</p>
+            <img src="/icons/arrow-right.svg" alt="icon for right arrow" />
+          </a>
+          <a href="#" class="flex w-full justify-between px-7 py-4">
+            <p class="text-xl font-medium">Benefits</p>
+            <img src="/icons/arrow-right.svg" alt="icon for right arrow" />
+          </a>
+          <a href="#" class="flex w-full justify-between px-7 py-4">
+            <p class="text-xl font-medium">Free Generator</p>
+            <img src="/icons/arrow-right.svg" alt="icon for right arrow" />
+          </a>
+          <div
+            class="flex w-full flex-1 flex-col items-center justify-end gap-5 p-7 pb-10"
+          >
+            <a class="hover:underline" href="/member">Already a member?</a>
+            <a
+              href="#"
+              class="w-full rounded-lg border border-white px-[25px] py-[9px] text-center"
+            >
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="overflow-hidden pb-24 pt-24 md:pb-36 lg:pt-52 xl:pb-48">
+      
+    </main>
+    <footer
+      class="flex flex-row items-center justify-between border-t border-white bg-[#333333] p-5 text-white lg:p-10"
+    >
+      <img class="h-5 lg:h-full" src="/images/logo.svg" alt="logo of reqaps" />
+      <div class="hidden flex-row items-center gap-7 lg:flex">
+        <a class="hover:underline" href="#">Already a member?</a>
+        <button class="rounded-lg border border-white px-[25px] py-[9px]">
+          Log in
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
