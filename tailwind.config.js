@@ -1,4 +1,5 @@
-import { fontFamily, screens } from "tailwindcss/defaultTheme";
+import { fontFamily, screens, colors } from "tailwindcss/defaultTheme";
+import colors from "tailwindcss/colors";
 
 export default {
   content: ["**/*.{html,js}"],
@@ -18,6 +19,7 @@ export default {
       },
     },
     colors: {
+      ...colors,
       gray: {
         50: "#FAFBFC",
         100: "#F7F9FC",
